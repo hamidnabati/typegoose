@@ -2,7 +2,12 @@ import 'reflect-metadata';
 import * as mongoose from 'mongoose';
 import * as _ from 'lodash';
 
+
+
 import { schema, models, methods, virtuals, hooks, plugins, constructors } from './data';
+
+(<any>mongoose).Promise = global.Promise;
+
 
 export * from './method';
 export * from './prop';
